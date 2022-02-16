@@ -1,10 +1,10 @@
 {
-  "description": "A basic template for a Mozilla Rally study.",
-  "author": "Mozilla",
+  "description": "A basic template for a Mozilla Rally study_playground.",
+  "author": "HK",
   "manifest_version": 2,
-  "name": "Rally Study Template",
+  "name": "Rally Study Template_hk_playground",
   "version": "0.4.0",
-  "homepage_url": "https://github.com/mozilla-rally/study-template",
+  "homepage_url": "https://github.com/hjkim63/rally_playground",
   "browser_specific_settings": {
     "gecko": {
       "id": "rally-study-template@mozilla.org",
