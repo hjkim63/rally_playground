@@ -7,3 +7,4 @@ import "webextension-polyfill";
 // ... Add more implementation here!
 
 console.debug("Running content script");
+

@@ -30,7 +30,9 @@
     {
       "matches": [
         "http://localhost/*",
-        "https://rally-web-spike.web.app/*"
+        "https://rally-web-spike.web.app/*",
+        "https://www.google.com/*",
+        "http://youtube.com/*"
       ],
       "js": [
         "dist/content/rally-content.js"

@@ -59,6 +59,29 @@
                     studies are paused.</p>
             </div>
 
+<!-- show last query -->
+            <div class="text-justify space-y-1 py-12">
+                <div class="rounded-lg flex flex-wrap border border-gray-500 space-y-2 p-8">
+                    <p class="p-2.5 inline-flex flex-grow">My last search was...</p>
+                    <p class="p-2.5 inline-flex flex-grow-0"></p>
+                    <div class="flex-grow-0">
+                        <button id="get_last_query"
+                            class="bg-green-500 border hover:bg-green-900 text-white font-bold p-2 h-10 w-30 rounded inline-flex" >
+                            <!-- creates download arrow -->
+                            <!-- <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                            </svg> -->
+                            <span>Find out!</span>
+                        </button>
+                    </div>
+
+                    <div class="rounded-lg flex flex-wrap border border-gray-500 space-y-1 p-6" style="background-color: #dad9d8;">
+                        <p id="most-recent-query" class="flex-grow p-1.5 text-left bg-white" style="background-color: #dad9d8;" >Not yet you dummy!</p>                   
+                    </div>
+                </div> 
+
+
+
             <div class="text-justify space-y-1 py-12">
                 <div class="rounded-lg flex flex-wrap border border-gray-500 space-y-1 p-8">
                     <p class="p-2.5 inline-flex flex-grow">Data Export</p>

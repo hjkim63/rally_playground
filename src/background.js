@@ -95,7 +95,7 @@ async function stateChangeCallback(newState) {
         }
       };
 
-      webScience.pageNavigation.onPageData.addListener(this.pageDataListener, { matchPatterns: ["http://localhost/*"] });
+      webScience.pageNavigation.onPageData.addListener(this.pageDataListener, { matchPatterns: ["http://localhost/*", "https://www.google.com/*", "https://www.youtube.com/*"] });
 
       // Example: register a content script for http://localhost/* pages
       // Note that the content script has the same relative path in dist/

@@ -31,6 +31,48 @@ document.getElementById("toggleEnabled").addEventListener("click", async event =
     }
 });
 
+//Display last query (add ID "get_last_query" )
+document.getElementById("get_last_query").addEventListener("click", async()=>{
+
+    //get data from local storage.
+    const data = await browser.storage.local.get(null);
+
+    const allQueries = Object.values(data);
+     // if empty, return "no query yet!"
+    if (allQueries.length == 0) return;
+
+    const sortedQueries = allQueries.sort((query1, query2) => {
+        if (query1.pageVisitStartTime > query2.pageVisitStartTime) {
+            return -1;
+        }
+        if (query1.pageVisitStartTime < query2.pageVisitStartTime) {
+            return 1;
+        } 
+        return 0;
+    });
+    const mostRecentQuery = allQueries[0];
+    
+
+    // checking that mostRecentQuery is a valid object
+    if (mostRecentQuery?.pageVisitStartTime) {
+        // parse query url to get query term (manually)
+        const query = mostRecentQuery.url;
+        const queryString = query.split('q=')[1];
+        const queryTerm = queryString.replaceAll('+', ' ')
+        document.getElementById('most-recent-query').innerHTML = queryTerm;
+        // URLSearchParams doesn't work because the url params are different for each queryable website (youtube, google, etc.)
+        // so need to account when parsing the urls
+
+        // (entire URL) set UI box content with the most recent query
+        // document.getElementById('most-recent-query').innerHTML = mostRecentQuery.url;
+    }
+
+    console.log('sortedQueries', sortedQueries);
+    // console.log('queryterm', queryterm)
+    console.log(queryString.getAll('queryTerm'))
+
+})
+
 document.getElementById("download").addEventListener("click", async () => {
     // Get all data from local storage.
     const data = await browser.storage.local.get(null);
